@@ -1,8 +1,6 @@
 # AxlsxEnhanced
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/axlsx_enhanced`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Provides a better way to serialize xlsx documents using axlsx gem.
 
 ## Installation
 
@@ -22,7 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+document = Axlsx::Package.new do |p|
+    # Creates a new worksheet
+    # args:
+    #  *(built-in Axlsx args)
+    #  name:         String, default: ""
+    #  smart_styles: Array,  default: AxlsxEnhanced::Helpers::Styles.defaults
+    p.workbook.smart_add_worksheet(name: 'Sheet 1') do |sheet|
+        # Universal styling for all cells
+        sheet.smart_add_row ["Simple cell value"], style: :bold
+        
+        # Universal styling for each cells
+        sheet.smart_add_row ["Cell 1", "Cell 2"], style: [:italic, :underlined]
+        
+        # Manual styling
+        row = sheet.smart_add_row ["Cell 1", "Cell 2"]
+        row.cells[0].smart_style = :bold
+        row.cells[1].smart_style = [:italic, :underlined]
+    end
+
+    p.serialize('hello.xlsx')
+end
+```
+
+You can see default styles in **[this file](https://github.com/[USERNAME]/axlsx_enhanced/blob/master/lib/axlsx_enhanced/helpers/styles/defaults.rb)**
+
 
 ## Development
 
