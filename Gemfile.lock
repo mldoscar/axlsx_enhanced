@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     axlsx_enhanced (0.1.0)
-      activesupport (~> 5.2.2)
-      axlsx (~> 2.0.1)
+      activesupport (~> 5.2)
+      axlsx (~> 2.0, >= 2.0.1)
 
 GEM
   remote: https://rubygems.org/
