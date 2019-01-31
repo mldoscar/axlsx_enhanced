@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["soporte@nicacode.com"]
 
   spec.summary       = %q{Provides better syntax and helpers for building xlsx documents with Axlsx gem}
-  spec.description   = %q{Provides better syntax and helpers for building xlsx documents with Axlsx gem}
+  spec.description   = %q{Enhances axlsx styling while building a spreadsheet by ruby code}
   spec.homepage      = "https://github.com/mldoscar/axlsx_enhanced"
   spec.license       = "MIT"
 
@@ -37,5 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   
   spec.add_runtime_dependency "activesupport", "~> 5.2"
-  spec.add_runtime_dependency "axlsx", "~> 2.0", '>= 2.0.1'
+  spec.add_runtime_dependency "axlsx", "~> 2.0", ">= 2.0.1"
 end
