@@ -1,13 +1,13 @@
 # AxlsxEnhanced
 
-Provides a better way to serialize xlsx documents using axlsx gem. Enhances axlsx styling while building a spreadsheet by ruby code.
+Provides a better way to serialize xlsx documents using caxlsx gem. Enhances caxlsx styling while building a spreadsheet by ruby code.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'axlsx_enhanced', '~> 0.1.2'
+gem 'axlsx_enhanced', '~> 0.1.4'
 ```
 
 And then execute:
